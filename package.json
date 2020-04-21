@@ -1,0 +1,38 @@
+{
+  "name": "front_end",
+  "version": "1.0.0",
+  "description": "An evironment for her",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/enmachs/front_end.git"
+  },
+  "author": "EnmChs",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/enmachs/front_end/issues"
+  },
+  "homepage": "https://github.com/enmachs/front_end#readme",
+  "devDependencies": {
+    "bourbon": "5.0.0",
+    "bourbon-neat": "2.1.0",
+    "browser-sync": "^2.26.7",
+    "del": "3.0.0",
+    "gulp": "3.9.1",
+    "gulp-cache": "^1.1.3",
+    "gulp-cssbeautify": "1.0.0",
+    "gulp-html-beautify": "1.0.1",
+    "gulp-imagemin": "4.0.0",
+    "gulp-sass": "3.1.0",
+    "gulp-slim": "0.3.0",
+    "jquery": "^3.5.0",
+    "merge-stream": "1.0.1",
+    "run-sequence": "^2.2.1"
+  },
+  "dependencies": {
+    "gulp-ruby-haml": "0.0.9"
+  }
+}
