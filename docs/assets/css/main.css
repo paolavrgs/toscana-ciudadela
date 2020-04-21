@@ -1,0 +1,213 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;900&display=swap");
+
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+.navbar {
+  background-image: url("../img/navbar-bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding: 8px 5vw 8px 8vw;
+}
+
+.nav-item {
+  padding: 0 8px;
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  .nav-item {
+    padding: 0 6px;
+  }
+}
+
+.navbar-brand img {
+  width: 135px;
+}
+
+.nav-link {
+  color: #fff;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.nav-link:hover {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.nav-link i {
+  font-size: 20px;
+}
+
+.main-slider {
+  width: 100%;
+  height: 90vh;
+}
+
+.main-slider .main-slider__item {
+  height: 90vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  padding-left: 8vw;
+}
+
+.main-slider .main-slider__info {
+  background-color: rgba(32, 82, 80, 0.66);
+  color: #fff;
+  padding: 30px;
+  width: 400px;
+  height: 85%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.main-slider .main-slider__info ul {
+  padding-left: 0;
+}
+
+.main-slider .main-slider__info li {
+  list-style: none;
+  margin: 30px 0;
+}
+
+.main-slider .main-slider__info p, .main-slider .main-slider__info li {
+  font-size: 17px;
+  letter-spacing: 4px;
+  font-weight: 500;
+}
+
+.main-slider .main-slider__info h2 {
+  text-transform: uppercase;
+  line-height: 30px;
+  font-size: 40px;
+}
+
+.main-slider .main-slider__info h2 span {
+  font-weight: 500;
+  font-size: 17px;
+}
+
+.main-slider .main-slider__info h2 i {
+  font-weight: 600;
+}
+
+.main-slider .main-slider__info .boldness {
+  letter-spacing: 4px;
+  font-weight: 900;
+  font-size: 35px;
+  margin-bottom: 0;
+}
+
+.main-quick-form {
+  background-color: #205250;
+  display: grid;
+  grid-template-columns: 35% 55%;
+  padding: 30px 50px 30px 6vw;
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  .main-quick-form {
+    grid-template-columns: 40% 50%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .main-quick-form {
+    grid-template-columns: 40% 60%;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+  .main-quick-form {
+    grid-template-columns: 40% 60%;
+  }
+}
+
+@media (min-width: 0px) and (max-width: 575px) {
+  .main-quick-form {
+    grid-template-columns: 100%;
+    padding: 30px;
+  }
+}
+
+.main-quick-form .main-quick-form__text {
+  color: #fff;
+  font-size: 22px;
+  letter-spacing: 0.83px;
+  display: flex;
+  align-items: center;
+}
+
+.main-quick-form .main-quick-form__text span {
+  font-weight: 700;
+}
+
+.main-quick-form .main-quick-form__text p, .main-quick-form .main-quick-form__text .main-slider .main-slider__info li, .main-slider .main-slider__info .main-quick-form .main-quick-form__text li {
+  font-weight: 300;
+}
+
+.main-quick-form .main-quick-form__form {
+  display: grid;
+  grid-template-columns: 35% 50%;
+  grid-gap: 30px;
+}
+
+@media (min-width: 0px) and (max-width: 575px) {
+  .main-quick-form .main-quick-form__form {
+    grid-template-columns: 100%;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+  .main-quick-form .main-quick-form__form {
+    grid-template-columns: 50% 50%;
+  }
+}
+
+.main-quick-form .main-quick-form__form .form-check-label {
+  font-size: 11px;
+  color: #fff;
+}
+
+.main-quick-form .main-quick-form__form .form-check-label a {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.main-quick-form .main-quick-form__form textarea {
+  height: 80px;
+  resize: none;
+}
+
+.btn-submit {
+  border: 2px solid #fff;
+  width: 100%;
+  color: #fff;
+  background-color: transparent;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.btn-submit.btn-submit-white {
+  background-color: #fff;
+  color: #205250;
+}
+
+.form-control {
+  border-radius: 0;
+  font-size: 15px;
+  border: 1px solid #fff;
+  background-clip: unset;
+}
+
+.form-control:focus {
+  box-shadow: none;
+  border-color: #205250;
+}

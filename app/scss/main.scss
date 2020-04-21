@@ -1,3 +1,201 @@
 @import 'bourbon';
 @import 'variables';
 @import 'mixins';
+
+body {
+  font-family: $font;
+}
+
+.navbar {
+  background-image: url('../img/navbar-bg.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding: 8px 5vw 8px 8vw;
+}
+
+.nav-item {
+  padding: 0 8px;
+
+  @include respond-to(lg) {
+    padding: 0 6px;
+  }
+}
+
+.navbar-brand img {
+  width: 135px;
+}
+
+.nav-link {
+  color: $white;
+  font-size: 11px;
+  font-weight: $semibold;
+  text-transform: uppercase;
+
+  &:hover {
+    color: rgba($white, .5);
+  }
+
+  i {
+    font-size: 20px;
+  }
+}
+
+.main-slider {
+  width: 100%;
+  height: 90vh;
+  
+  .main-slider__item {
+    height: 90vh;
+    @include bg(cover, no-repeat, center);
+    display: flex;
+    align-items: center;
+    padding-left: 8vw;
+  }
+
+  .main-slider__info {
+    background-color: rgba($primary, 0.66);
+    color: $white;
+    padding: 30px;
+    width: 400px;
+    height: 85%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+    ul {
+      padding-left: 0;
+    }
+
+    li {
+      @extend p;
+      list-style: none;
+      margin: 30px 0;
+    }
+
+    p {
+      font-size: 17px;
+      letter-spacing: 4px;
+      font-weight: $medium;
+    }
+
+    h2 {
+      text-transform: uppercase;
+      line-height: 30px;
+      font-size: 40px;
+
+      span {
+        font-weight: $medium;
+        font-size: 17px;
+      }
+
+      i {
+        font-weight: $semibold;
+      }
+    }
+
+    .boldness {
+      letter-spacing: 4px;
+      font-weight: $extrabold;
+      font-size: 35px;
+      margin-bottom: 0;
+    }
+
+  }
+}
+
+.main-quick-form {
+  background-color: $primary;
+  display: grid;
+  grid-template-columns: 35% 55%;
+  padding: 30px 50px 30px 6vw;
+
+  @include respond-to(lg) {
+    grid-template-columns: 40% 50%;
+  }
+
+  @include respond-to(md) {
+    grid-template-columns: 40% 60%;
+  }
+
+  @include respond-to(sm) {
+    grid-template-columns: 40% 60%;
+  }
+
+  @include respond-to(xs) {
+    grid-template-columns: 100%;
+    padding: 30px;
+  }
+
+  .main-quick-form__text {
+    color: $white;
+    font-size: 22px;
+    letter-spacing: 0.83px;
+    display: flex;
+    align-items: center;
+
+    span {
+      font-weight: $bold;
+    }
+
+    p {
+      font-weight: $light;
+    }
+  }
+
+  .main-quick-form__form {
+    display: grid;
+    grid-template-columns: 35% 50%;
+    grid-gap: 30px;
+
+    @include respond-to(xs) {
+      grid-template-columns: 100%;
+    }
+
+    @include respond-to(sm) {
+      grid-template-columns: 50% 50%;
+    }
+
+    .form-check-label {
+      font-size: 11px;
+      color: $white;
+
+      a {
+        color: $white;
+        text-decoration: underline;
+      }
+    }
+
+    textarea {
+      height: 80px;
+      resize: none;
+    }
+  }
+}
+
+.btn-submit {
+  border: 2px solid $white;
+  width: 100%;
+  color: $white;
+  background-color: transparent;
+  text-transform: uppercase;
+  font-weight: 700;
+
+  &.btn-submit-white {
+    background-color: $white;
+    color: $primary;
+  }
+}
+
+.form-control {
+  border-radius: 0;
+  font-size: 15px;
+  border: 1px solid $white;
+  background-clip: unset;
+
+  &:focus {
+    box-shadow: none;
+    border-color: $primary;
+  }
+}

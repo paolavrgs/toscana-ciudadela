@@ -8,11 +8,14 @@ $breakpoints: (
 ) !default;
 
 // Fonts
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;900&display=swap');
 $font: 'Montserrat', sans-serif;
 $light: 300;
 $regular: 400;
-$medium: 600;
-$bold: 900;
+$medium: 500;
+$semibold: 600;
+$bold: 700;
+$extrabold: 900;
 
 // Colors
 $primary: #205250;
