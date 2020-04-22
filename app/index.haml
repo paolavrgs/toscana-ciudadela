@@ -21,28 +21,62 @@
         %img{ src: "assets/img/section-02.png", alt: "Nuestra Ciudadela" }
       .main-nearby__text
         %h1.title
-          Estamos
-          %span cerca de
+          Nuestra
+          %span ciudadela
         .main-nearby__list
-          - list_one = [ {img: '', text: 'Pet zone'}, {img: '', text: 'Teatrino'}, {img: '', text: 'Oratorio'}, {img: '', text: 'Juegos infantiles'}, {img: '', text: 'Senderos ecológicos'}, {img: '', text: 'La bicicleta'}, {img: '', text: 'Replica de la casa Sabaneta'} ]
-          - list_two = [ {img: '', text: 'Zona de picnic'}, {img: '', text: 'Mirador'}, {img: '', text: 'Pista de triciclos'}, {img: '', text: 'Circuito de ciclomontañismo'}, {img: '', text: 'Locales comerciales'}, {img: '', text: 'Gimnasio'} ]
+          - list_one = [ {img: 'assets/img/icons/petzone.png', text: 'Pet zone'}, {img: 'assets/img/icons/theater.png', text: 'Teatrino'}, {img: 'assets/img/icons/church.png', text: 'Oratorio'}, {img: 'assets/img/icons/kidsgame.png', text: 'Juegos infantiles'}, {img: 'assets/img/icons/eco.png', text: 'Senderos ecológicos'}, {img: 'assets/img/icons/bike.png', text: 'La bicicleta'}, {img: 'assets/img/icons/house.png', text: 'Replica de la casa Sabaneta'} ]
+          - list_two = [ {img: 'assets/img/icons/picnic.png', text: 'Zona de picnic'}, {img: 'assets/img/icons/viewpoint.png', text: 'Mirador'}, {img: 'assets/img/icons/tricycle.png', text: 'Pista de triciclos'}, {img: 'assets/img/icons/mountain.png', text: 'Circuito de ciclomontañismo'}, {img: 'assets/img/icons/store.png', text: 'Locales comerciales'}, {img: 'assets/img/icons/gym.png', text: 'Gimnasio'} ]
           %ul
             - list_one.each do |item|
               %li
                 .list-icon
-                  %i.fa.fa-whatsapp
+                  %img{ src: "#{item[:img]}" }
                 .list-text= item[:text]
           %ul
             - list_two.each do |item|
               %li
                 .list-icon
-                  %i.fa.fa-whatsapp
+                  %img{ src: "#{item[:img]}" }
                 .list-text= item[:text]
-    %section.main-video
+    %section.main-video{ style: "background-image: url('assets/img/section-03-bg.jpg');" }
       %h3 Video de toscana
       .main-video__trigger
         %img{ src: "assets/img/icons/play.png" }
     %section.main-properties
+      .main-properties__item
+        %img.property-img.w-100{ src: "assets/img/prato.jpg", alt: "Prato" }
+        .item-mask
+          %img.property-logo{ src: "assets/img/logos/logo-prato.png", alt: "Prato logo" }
+          %h4.strong Prato
+          %h4 Apartamentos
+          .item-mask__area
+            %span Área
+            %br
+            70 m² hasta 87 m²
+          .item-mask__price
+            %span Desde
+            $323.601.608
+            %br
+            %small Valor impuestos incluido*
+          .item-mask__button
+            %a.btn.btn-custom.white{ href: "#" } Visitar Ahora
+      .main-properties__item
+        %img.property-img.w-100{ src: "assets/img/livorno.jpg", alt: "livorno" }
+        .item-mask
+          %img.property-logo{ src: "assets/img/logos/logo-livorno.png", alt: "livorno logo" }
+          %h4.strong Livorno
+          %h4 Apartamentos
+          .item-mask__area
+            %span Área
+            %br
+            55 m² hasta 62 m²
+          .item-mask__price
+            %span Desde
+            $251.913.401
+            %br
+            %small Valor impuestos incluido*
+          .item-mask__button
+            %a.btn.btn-custom.white{ href: "#" } Visitar Ahora
     %section.main-location
     %section.main-form
     %section.main-footer
