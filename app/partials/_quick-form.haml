@@ -1,0 +1,24 @@
+%section.main-quick-form
+  .main-quick-form__text
+    %p
+      %span Te llamamos para darte
+      %br/
+      una asesoría completa
+  %form.main-quick-form__form
+    %div
+      .form-group
+        %input.form-control{placeholder: "Nombre completo*"}
+      .form-group
+        %input.form-control{placeholder: "Teléfono*"}
+      .form-group.mb-0
+        %input.form-control{placeholder: "Email*", type: "email"}
+    %div
+      .form-group.mb-0
+        %textarea.form-control{placeholder: "Comentarios"}
+      .form-group.form-check.mb-1
+        %input.form-check-input{type: "checkbox"}/
+        %label.form-check-label
+          Acepto
+          %a{ href: "#" } Politicas y Privacidad
+      .form-group
+        %input.btn.btn-submit{ type: "submit" }

@@ -4,50 +4,18 @@
     = Haml::Engine.new(File.read('app/partials/_head.haml')).render
   %body
     = Haml::Engine.new(File.read('app/partials/_navbar.haml')).render
-    %section.main-slider
-      .main-slider__item{ style: "background-image:url('assets/img/slide-01.jpg');"}
-        .main-slider__info
-          %h2.boldness
-            Conecta
-            %br/
-            %span
-              con tus
-              %i sentidos
-          %ul
-            %li Observa la naturaleza
-            %li Respira mejor aire
-            %li Siente entorno campestre
-          %p.boldness
-            70.000 m
-            %sup 2
-          %p.mb-0 de reserva natural
-      .main-slider__item{ style: "background-image:url('assets/img/slide-01.jpg');"}
-        .main-slider__infoproject
-    %section.main-quick-form
-      .main-quick-form__text
-        %p
-          %span Te llamamos para darte
-          %br/
-          una asesoría completa
-      %form.main-quick-form__form
-        %div
-          .form-group
-            %input.form-control{placeholder: "Nombre completo*"}
-          .form-group
-            %input.form-control{placeholder: "Teléfono*"}
-          .form-group.mb-0
-            %input.form-control{placeholder: "Email*", type: "email"}
-        %div
-          .form-group.mb-0
-            %textarea.form-control{placeholder: "Comentarios"}
-          .form-group.form-check.mb-1
-            %input.form-check-input{type: "checkbox"}/
-            %label.form-check-label
-              Acepto
-              %a{ href: "#" } Politicas y Privacidad
-          .form-group
-            %input.btn.btn-submit{ type: "submit" }
+    = Haml::Engine.new(File.read('app/partials/_slider.haml')).render
+    = Haml::Engine.new(File.read('app/partials/_quick-form.haml')).render
     %section.main-about
+      .main-about__text
+        %h1
+          Vive en
+          %span Sabaneta
+        %h4 Cerca de todo
+        %p Ubicado en el municipio de Sabaneta, Antioquia, sector Loma de San José, zona de alta valorización, facilidad de acceso por diferentes vías, en una reserva natural que te entregará toda la tranquilidad que necesitas.
+        %a.btn.btn-custom.mb-5{ href: "#" } Ver ubicación
+      .main-about__img
+        %img{ src: "assets/img/section-01.jpg", alt: "Vive en Sabaneta" }
     %section.main-nearby
     %section.main-video
     %section.main-properties
