@@ -247,46 +247,52 @@ body {
   }
 }
 
+.title {
+  position: relative;
+  margin: 120px 0 90px 50px;
+  font-size: 40px;
+  text-transform: uppercase;
+  font-weight: $light;
+  letter-spacing: 1.41px;
+
+  @include respond-to(md) {
+    font-size: 30px;
+    margin: 100px 0 70px 50px;
+  }
+
+  @include respond-to(sm) {
+    font-size: 30px;
+    margin: 100px 0 70px 50px;
+  }
+
+  @include respond-to(xs) {
+    font-size: 30px;
+    margin: 100px 0 70px 50px;
+  }
+
+  span {
+    font-weight: $semibold
+  }
+
+  &::before {
+    @include pseudo();
+    left: -50px;
+    color: rgba($text, .16);
+    font-size: 150px;
+    font-weight: bold;
+    top: -70px;
+  }
+}
+
 .main-about__text {
-  h1 {
-    position: relative;
+  .title {
     background-color: $white;
-    margin: 120px 0 90px 50px;
-    font-size: 40px;
     color: $text;
-    text-transform: uppercase;
-    font-weight: $light;
-    letter-spacing: 1.41px;
-
-    @include respond-to(md) {
-      font-size: 30px;
-      margin: 100px 0 70px 50px;
-    }
-
-    @include respond-to(sm) {
-      font-size: 30px;
-      margin: 100px 0 70px 50px;
-    }
-
-    @include respond-to(xs) {
-      font-size: 30px;
-      margin: 100px 0 70px 50px;
-    }
-
-    span {
-      font-weight: $semibold
-    }
 
     &::before {
-      @include pseudo();
-      counter-increment: section;                   /* Increment the value of section counter by 1 */
-      content: "0" counter(section);
-      left: -50px;
-      z-index: -1;
+      content: "01";
       color: rgba($text, .16);
-      font-size: 150px;
-      font-weight: bold;
-      top: -70px;
+      z-index: -1;
     }
   }
 
@@ -356,5 +362,115 @@ body {
 
   &::before {
     content: "\f053";
+  }
+}
+
+.main-nearby {
+  background-image: url('../img/section-02-06-bg.jpg');
+  @include bg(cover, no-repeat, center);
+  display: grid;
+  grid-template-columns: 40% 60%;
+  padding-bottom: 50px;
+
+  @include respond-to(xs) {
+    grid-template-columns: 100%;
+  }
+
+  @include respond-to(sm) {
+    grid-template-columns: 100%;
+  }
+}
+
+.main-nearby__img {
+  img {
+    width: 95%;
+  }
+}
+
+.main-nearby__text {
+  z-index: 1;
+  padding-left: 80px;
+
+  @include respond-to(xs) {
+    padding-left: 20px;
+  }
+
+  .title {
+    background: linear-gradient(90deg, rgba(32,82,80,1) 0%, rgba(35,97,94,0.86) 45%, rgba(32,82,80,0.10) 100%);;
+    color: $white;
+    display: inline-block;
+    
+    &::before {
+      content: "02";
+      color: rgba($white, .16);
+      z-index: -1;
+    }
+  }
+}
+
+.main-nearby__list {
+  display: flex;
+
+  @include respond-to(xs) {
+    display: unset;
+  }
+
+  ul {
+    padding-left: 0;
+    list-style: none;
+    margin-right: 50px;
+
+    @include respond-to(md) {
+      margin-right: 0;
+    }
+  }
+
+  li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+    font-size: 15px;
+
+    .list-icon {
+      border: 1px solid $white;
+      border-radius: 50%;
+      height: 33px;
+      width: 33px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+
+      img {
+        width: 100%;
+      }
+    }
+
+    .list-text {
+      margin-left: 10px;
+      color: white;
+      letter-spacing: 0.04px;
+      font-size: 15px;
+    }
+  }
+}
+
+.main-video {
+  background-image: url('../img/section-03-bg.jpg');
+  @include bg(cover, no-repeat, center);
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  h3 {
+    color: $white;
+    font-size: 35px;
+    letter-spacing: 0.1px;
+    font-weight: $light;
+    text-transform: uppercase;
+    margin-bottom: 20px;
   }
 }

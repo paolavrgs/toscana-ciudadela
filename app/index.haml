@@ -8,7 +8,7 @@
     = Haml::Engine.new(File.read('app/partials/_quick-form.haml')).render
     %section.main-about
       .main-about__text
-        %h1
+        %h1.title
           Vive en
           %span Sabaneta
         %h4 Cerca de todo
@@ -17,7 +17,31 @@
       .main-about__img
         %img{ src: "assets/img/section-01.jpg", alt: "Vive en Sabaneta" }
     %section.main-nearby
+      .main-nearby__img
+        %img{ src: "assets/img/section-02.png", alt: "Nuestra Ciudadela" }
+      .main-nearby__text
+        %h1.title
+          Estamos
+          %span cerca de
+        .main-nearby__list
+          - list_one = [ {img: '', text: 'Pet zone'}, {img: '', text: 'Teatrino'}, {img: '', text: 'Oratorio'}, {img: '', text: 'Juegos infantiles'}, {img: '', text: 'Senderos ecológicos'}, {img: '', text: 'La bicicleta'}, {img: '', text: 'Replica de la casa Sabaneta'} ]
+          - list_two = [ {img: '', text: 'Zona de picnic'}, {img: '', text: 'Mirador'}, {img: '', text: 'Pista de triciclos'}, {img: '', text: 'Circuito de ciclomontañismo'}, {img: '', text: 'Locales comerciales'}, {img: '', text: 'Gimnasio'} ]
+          %ul
+            - list_one.each do |item|
+              %li
+                .list-icon
+                  %i.fa.fa-whatsapp
+                .list-text= item[:text]
+          %ul
+            - list_two.each do |item|
+              %li
+                .list-icon
+                  %i.fa.fa-whatsapp
+                .list-text= item[:text]
     %section.main-video
+      %h3 Video de toscana
+      .main-video__trigger
+        %img{ src: "assets/img/icons/play.png" }
     %section.main-properties
     %section.main-location
     %section.main-form
