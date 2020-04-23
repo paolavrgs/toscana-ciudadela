@@ -2,7 +2,7 @@ new WOW().init();
  
 WebFont.load({
   google: {
-    families: ['Montserrat:400,500']
+    families: ['Montserrat:300,400,500,600,700,900']
   }
 });
 
