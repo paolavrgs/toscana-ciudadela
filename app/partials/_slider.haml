@@ -1,21 +1,54 @@
-%section.main-slider
-  .main-slider__item{ style: "background-image:url('assets/img/slide-01.jpg');"}
-    .main-slider__info
-      %h2.boldness
-        Conecta
-        %br/
-        %span
-          con tus
-          %i sentidos
-      %ul
-        %li Observa la naturaleza
-        %li Respira mejor aire
-        %li Siente entorno campestre
-      %p.boldness
-        70.000 m
-        %sup 2
-      %p.mb-0 de reserva natural
-  .main-slider__item{ style: "background-image:url('assets/img/slide-02.png');"}
-    .main-slider__infoproject
-  .main-slider__item{ style: "background-image:url('assets/img/slide-03.png');"}
-    .main-slider__infoproject
+%section.main-slider#toscana-slider
+  .main-slider__item{ style: "background-image:url('assets/img/slider/slide-01.jpg');"}
+    .main-slider__box{ "data-animation" => "fadeInUp"}
+      .main-slider__info
+        %h2.boldness
+          Conecta
+          %br/
+          %span
+            con tus
+            %i sentidos
+        %ul
+          %li Observa la naturaleza
+          %li Respira mejor aire
+          %li Siente entorno campestre
+        %p.boldness
+          70.000 m
+          %sup 2
+        %p.mb-0 de reserva natural
+  .main-slider__item{ style: "background-image:url('assets/img/slider/slide-02.jpg');"}
+    .main-slider__box{ "data-animation" => "fadeInUp"}
+      .main-slider__infoproject
+        %img.property-logo{ src: "assets/img/logos/logo-prato-3x.png", alt: "Prato logo" }
+          %h4 
+            Prato 
+            %br
+            Apartamentos
+          .infoproject__address
+            %span Ubicación
+            %p Loma de San José, Sabaneta
+          .infoproject__area
+            %span Área
+            %p 70 m² hasta 87 m²
+          .infoproject__price
+            %span Desde
+            %p $323.601.608
+            %small Valor impuestos incluido*
+  .main-slider__item{ style: "background-image:url('assets/img/slider/slide-03.png');"}
+    .main-slider__box{ "data-animation" => "fadeInUp"}
+      .main-slider__infoproject
+        %img.property-logo{ src: "assets/img/logos/logo-livorno-3x.png", alt: "Livorno logo" }
+          %h4 
+            Livorno 
+            %br
+            Apartamentos
+          .infoproject__address
+            %span Ubicación
+            %p Loma de San José, Sabaneta
+          .infoproject__area
+            %span Área
+            %p 55 m² hasta 62 m²
+          .infoproject__price
+            %span Desde
+            %p $251.913.401
+            %small Valor impuestos incluido*

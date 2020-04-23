@@ -1,0 +1,22 @@
+%section.main-nearby#ciudadela
+  .main-nearby__img
+    %img.wow.fadeIn{ src: "assets/img/section-02.png", alt: "Nuestra Ciudadela" }
+  .main-nearby__text
+    %h1.title
+      Nuestra
+      %span ciudadela
+    .main-nearby__list
+      - list_one = [ {img: 'assets/img/icons/petzone.png', text: 'Pet zone'}, {img: 'assets/img/icons/theater.png', text: 'Teatrino'}, {img: 'assets/img/icons/church.png', text: 'Oratorio'}, {img: 'assets/img/icons/kidsgame.png', text: 'Juegos infantiles'}, {img: 'assets/img/icons/eco.png', text: 'Senderos ecológicos'}, {img: 'assets/img/icons/bike.png', text: 'La bicicleta'}, {img: 'assets/img/icons/house.png', text: 'Replica de la casa Sabaneta'} ]
+      - list_two = [ {img: 'assets/img/icons/picnic.png', text: 'Zona de picnic'}, {img: 'assets/img/icons/viewpoint.png', text: 'Mirador'}, {img: 'assets/img/icons/tricycle.png', text: 'Pista de triciclos'}, {img: 'assets/img/icons/mountain.png', text: 'Circuito de ciclomontañismo'}, {img: 'assets/img/icons/store.png', text: 'Locales comerciales'}, {img: 'assets/img/icons/gym.png', text: 'Gimnasio'} ]
+      %ul
+        - list_one.each_with_index do |item, i|
+          %li.wow.fadeIn{ "data-wow-delay" => "0.#{i+2}s" }
+            .list-icon
+              %img{ src: "#{item[:img]}" }
+            .list-text= item[:text]
+      %ul
+        - list_two.each_with_index do |item, i|
+          %li.wow.fadeIn{ "data-wow-delay" => "0.#{i+2}s" }
+            .list-icon
+              %img{ src: "#{item[:img]}" }
+            .list-text= item[:text]

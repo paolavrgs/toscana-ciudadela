@@ -97,6 +97,14 @@ gulp.task('css', function() {
   }))
 });
 
+gulp.task('pdf', function() {
+  return gulp.src('app/pdf/**/*.pdf')
+  .pipe(gulp.dest('docs/assets/pdf'))
+  .pipe(browserSync.reload({
+    stream: true
+  }))
+});
+
 gulp.task('js', function() {
   return gulp.src('app/js/**/*.js')
   .pipe(gulp.dest('docs/assets/js'))
@@ -138,6 +146,7 @@ gulp.task('default', ['browserSync', 'compile_haml', 'compile_sass', 'css', 'js'
   gulp.watch('app/scss/**/*.scss', ['compile_sass']);
   gulp.watch('app/**/*.haml', ['compile_haml']);
   gulp.watch('app/css/*.+(css|min.css)', ['css']);
+  gulp.watch('app/css/*.pdf', ['pdf']);
   gulp.watch('app/js/**/*.js', ['js']);
   gulp.watch('app/img/**/*.+(png|jpg|jpeg|gif|svg)', browserSync.reload);
 
@@ -147,7 +156,7 @@ gulp.task('default', ['browserSync', 'compile_haml', 'compile_sass', 'css', 'js'
 
 gulp.task('set', function (callback) {
   runSequence('clean:docs', 'add_jquery',
-    ['compile_haml','compile_sass', 'images', 'fonts', 'css', 'js']
+    ['compile_haml','compile_sass', 'images', 'fonts', 'css', 'js', 'pdf']
   )
 });
 

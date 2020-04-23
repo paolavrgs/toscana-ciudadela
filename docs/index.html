@@ -14,6 +14,7 @@
   <meta content='' property='og:image'>
   <title>Toscana Ciudadela</title>
   <link href='https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css' rel='stylesheet'>
+  <link href='assets/css/animate/animate.css' rel='stylesheet'>
   <link href='assets/css/slick/slick.css' rel='stylesheet'>
   <link href='assets/css/slick/slick-theme.css' rel='stylesheet'>
   <link href='assets/css/main.css' rel='stylesheet'>
@@ -26,37 +27,37 @@
       <img src='assets/img/logos/logo-toscana.png'>
     </a>
     <button aria-controls='toscanaNavbar' aria-expanded='false' aria-label='Toggle navigation' class='navbar-toggler' data-target='#toscanaNavbar' data-toggle='collapse' type='button'>
-      <span class='navbar-toggler-icon'></span>
+      <span class='fa fa-bars'></span>
     </button>
     <div class='collapse navbar-collapse' id='toscanaNavbar'>
       <ul class='navbar-nav mr-auto'>
         <li class='nav-item'>
-          <a class='nav-link' href='#'>Vive en Sabaneta</a>
+          <a class='nav-link scroll-link' href='#sabaneta'>Vive en Sabaneta</a>
         </li>
         <li class='nav-item'>
-          <a class='nav-link' href='#'>Estamos cerca de</a>
+          <a class='nav-link scroll-link' href='#ciudadela'>Estamos cerca de</a>
         </li>
         <li class='nav-item'>
-          <a class='nav-link' href='#'>Video</a>
+          <a class='nav-link scroll-link' href='#video'>Video</a>
         </li>
         <li class='nav-item'>
-          <a class='nav-link' href='#'>Proyectos toscana</a>
+          <a class='nav-link scroll-link' href='#proyectos'>Proyectos toscana</a>
         </li>
         <li class='nav-item'>
-          <a class='nav-link' href='#'>Ubicación</a>
+          <a class='nav-link scroll-link' href='#ubicacion'>Ubicación</a>
         </li>
         <li class='nav-item'>
-          <a class='nav-link' href='#'>Contacto</a>
+          <a class='nav-link scroll-link' href='#contacto'>Contacto</a>
         </li>
       </ul>
       <ul class='navbar-nav ml-auto'>
         <li class='nav-item'>
-          <a class='nav-link' href='#'>
+          <a class='nav-link' href='https://www.facebook.com/nivelpropiedadraiz' target='blank'>
             <i class='fa fa-facebook'></i>
           </a>
         </li>
         <li class='nav-item'>
-          <a class='nav-link' href='#'>
+          <a class='nav-link' href='https://www.instagram.com/nivelpropiedadraiz/' target='blank'>
             <i class='fa fa-instagram'></i>
           </a>
         </li>
@@ -64,34 +65,82 @@
     </div>
   </nav>
 
-  <section class='main-slider'>
-    <div class='main-slider__item' style='background-image:url(&#39;assets/img/slide-01.jpg&#39;);'>
-      <div class='main-slider__info'>
-        <h2 class='boldness'>
-          Conecta
-          <br>
-          <span>
-            con tus
-            <i>sentidos</i>
-          </span>
-        </h2>
-        <ul>
-          <li>Observa la naturaleza</li>
-          <li>Respira mejor aire</li>
-          <li>Siente entorno campestre</li>
-        </ul>
-        <p class='boldness'>
-          70.000 m
-          <sup>2</sup>
-        </p>
-        <p class='mb-0'>de reserva natural</p>
+  <section class='main-slider' id='toscana-slider'>
+    <div class='main-slider__item' style='background-image:url(&#39;assets/img/slider/slide-01.jpg&#39;);'>
+      <div class='main-slider__box' data-animation='fadeInUp'>
+        <div class='main-slider__info'>
+          <h2 class='boldness'>
+            Conecta
+            <br>
+            <span>
+              con tus
+              <i>sentidos</i>
+            </span>
+          </h2>
+          <ul>
+            <li>Observa la naturaleza</li>
+            <li>Respira mejor aire</li>
+            <li>Siente entorno campestre</li>
+          </ul>
+          <p class='boldness'>
+            70.000 m
+            <sup>2</sup>
+          </p>
+          <p class='mb-0'>de reserva natural</p>
+        </div>
       </div>
     </div>
-    <div class='main-slider__item' style='background-image:url(&#39;assets/img/slide-02.png&#39;);'>
-      <div class='main-slider__infoproject'></div>
+    <div class='main-slider__item' style='background-image:url(&#39;assets/img/slider/slide-02.jpg&#39;);'>
+      <div class='main-slider__box' data-animation='fadeInUp'>
+        <div class='main-slider__infoproject'>
+          <img alt='Prato logo' class='property-logo' src='assets/img/logos/logo-prato-3x.png'>
+          <h4>
+            Prato
+            <br>
+            Apartamentos
+          </h4>
+          <div class='infoproject__address'>
+            <span>Ubicación</span>
+            <p>Loma de San José, Sabaneta</p>
+          </div>
+          <div class='infoproject__area'>
+            <span>Área</span>
+            <p>70 m² hasta 87 m²</p>
+          </div>
+          <div class='infoproject__price'>
+            <span>Desde</span>
+            <p>$323.601.608</p>
+            <small>Valor impuestos incluido*</small>
+          </div>
+          </img>
+        </div>
+      </div>
     </div>
-    <div class='main-slider__item' style='background-image:url(&#39;assets/img/slide-03.png&#39;);'>
-      <div class='main-slider__infoproject'></div>
+    <div class='main-slider__item' style='background-image:url(&#39;assets/img/slider/slide-03.png&#39;);'>
+      <div class='main-slider__box' data-animation='fadeInUp'>
+        <div class='main-slider__infoproject'>
+          <img alt='Livorno logo' class='property-logo' src='assets/img/logos/logo-livorno-3x.png'>
+          <h4>
+            Livorno
+            <br>
+            Apartamentos
+          </h4>
+          <div class='infoproject__address'>
+            <span>Ubicación</span>
+            <p>Loma de San José, Sabaneta</p>
+          </div>
+          <div class='infoproject__area'>
+            <span>Área</span>
+            <p>55 m² hasta 62 m²</p>
+          </div>
+          <div class='infoproject__price'>
+            <span>Desde</span>
+            <p>$251.913.401</p>
+            <small>Valor impuestos incluido*</small>
+          </div>
+          </img>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -123,7 +172,7 @@
           <input class='form-check-input' type='checkbox'>
           <label class='form-check-label'>
             Acepto
-            <a href='#'>Politicas y Privacidad</a>
+            <a href='assets/pdf/MANUAL_DE_POLITICAS_PROMOTORA.pdf' target='blank'>Politicas y Privacidad</a>
           </label>
         </div>
         <div class='form-group'>
@@ -133,182 +182,187 @@
     </form>
   </section>
 
-  <section class="main-about">
-    <div class="main-about__text">
-      <h1 class="title">
+  <section class='main-about' id='sabaneta'>
+    <div class='main-about__text'>
+      <h1 class='title'>
         Vive en
         <span>Sabaneta</span>
       </h1>
       <h4>Cerca de todo</h4>
       <p>Ubicado en el municipio de Sabaneta, Antioquia, sector Loma de San José, zona de alta valorización, facilidad de acceso por diferentes vías, en una reserva natural que te entregará toda la tranquilidad que necesitas.</p>
-      <a class="btn btn-custom mb-5" href="#">Ver ubicación</a>
+      <a class='btn btn-custom mb-5' href='#'>Ver ubicación</a>
     </div>
-    <div class="main-about__img">
-      <img alt="Vive en Sabaneta" src="assets/img/section-01.jpg">
+    <div class='main-about__img'>
+      <img alt='Vive en Sabaneta' class='wow fadeInDown' data-wow-delay='.5s' src='assets/img/section-01.jpg'>
     </div>
   </section>
-  <section class="main-nearby">
-    <div class="main-nearby__img">
-      <img alt="Nuestra Ciudadela" src="assets/img/section-02.png">
+
+  <section class='main-nearby' id='ciudadela'>
+    <div class='main-nearby__img'>
+      <img alt='Nuestra Ciudadela' class='wow fadeIn' src='assets/img/section-02.png'>
     </div>
-    <div class="main-nearby__text">
-      <h1 class="title">
+    <div class='main-nearby__text'>
+      <h1 class='title'>
         Nuestra
         <span>ciudadela</span>
       </h1>
-      <div class="main-nearby__list">
+      <div class='main-nearby__list'>
         <ul>
-          <li>
-            <div class="list-icon">
-              <img src="assets/img/icons/petzone.png">
+          <li class='wow fadeIn' data-wow-delay='0.2s'>
+            <div class='list-icon'>
+              <img src='assets/img/icons/petzone.png'>
             </div>
-            <div class="list-text">Pet zone</div>
+            <div class='list-text'>Pet zone</div>
           </li>
-          <li>
-            <div class="list-icon">
-              <img src="assets/img/icons/theater.png">
+          <li class='wow fadeIn' data-wow-delay='0.3s'>
+            <div class='list-icon'>
+              <img src='assets/img/icons/theater.png'>
             </div>
-            <div class="list-text">Teatrino</div>
+            <div class='list-text'>Teatrino</div>
           </li>
-          <li>
-            <div class="list-icon">
-              <img src="assets/img/icons/church.png">
+          <li class='wow fadeIn' data-wow-delay='0.4s'>
+            <div class='list-icon'>
+              <img src='assets/img/icons/church.png'>
             </div>
-            <div class="list-text">Oratorio</div>
+            <div class='list-text'>Oratorio</div>
           </li>
-          <li>
-            <div class="list-icon">
-              <img src="assets/img/icons/kidsgame.png">
+          <li class='wow fadeIn' data-wow-delay='0.5s'>
+            <div class='list-icon'>
+              <img src='assets/img/icons/kidsgame.png'>
             </div>
-            <div class="list-text">Juegos infantiles</div>
+            <div class='list-text'>Juegos infantiles</div>
           </li>
-          <li>
-            <div class="list-icon">
-              <img src="assets/img/icons/eco.png">
+          <li class='wow fadeIn' data-wow-delay='0.6s'>
+            <div class='list-icon'>
+              <img src='assets/img/icons/eco.png'>
             </div>
-            <div class="list-text">Senderos ecológicos</div>
+            <div class='list-text'>Senderos ecológicos</div>
           </li>
-          <li>
-            <div class="list-icon">
-              <img src="assets/img/icons/bike.png">
+          <li class='wow fadeIn' data-wow-delay='0.7s'>
+            <div class='list-icon'>
+              <img src='assets/img/icons/bike.png'>
             </div>
-            <div class="list-text">La bicicleta</div>
+            <div class='list-text'>La bicicleta</div>
           </li>
-          <li>
-            <div class="list-icon">
-              <img src="assets/img/icons/house.png">
+          <li class='wow fadeIn' data-wow-delay='0.8s'>
+            <div class='list-icon'>
+              <img src='assets/img/icons/house.png'>
             </div>
-            <div class="list-text">Replica de la casa Sabaneta</div>
+            <div class='list-text'>Replica de la casa Sabaneta</div>
           </li>
         </ul>
         <ul>
-          <li>
-            <div class="list-icon">
-              <img src="assets/img/icons/picnic.png">
+          <li class='wow fadeIn' data-wow-delay='0.2s'>
+            <div class='list-icon'>
+              <img src='assets/img/icons/picnic.png'>
             </div>
-            <div class="list-text">Zona de picnic</div>
+            <div class='list-text'>Zona de picnic</div>
           </li>
-          <li>
-            <div class="list-icon">
-              <img src="assets/img/icons/viewpoint.png">
+          <li class='wow fadeIn' data-wow-delay='0.3s'>
+            <div class='list-icon'>
+              <img src='assets/img/icons/viewpoint.png'>
             </div>
-            <div class="list-text">Mirador</div>
+            <div class='list-text'>Mirador</div>
           </li>
-          <li>
-            <div class="list-icon">
-              <img src="assets/img/icons/tricycle.png">
+          <li class='wow fadeIn' data-wow-delay='0.4s'>
+            <div class='list-icon'>
+              <img src='assets/img/icons/tricycle.png'>
             </div>
-            <div class="list-text">Pista de triciclos</div>
+            <div class='list-text'>Pista de triciclos</div>
           </li>
-          <li>
-            <div class="list-icon">
-              <img src="assets/img/icons/mountain.png">
+          <li class='wow fadeIn' data-wow-delay='0.5s'>
+            <div class='list-icon'>
+              <img src='assets/img/icons/mountain.png'>
             </div>
-            <div class="list-text">Circuito de ciclomontañismo</div>
+            <div class='list-text'>Circuito de ciclomontañismo</div>
           </li>
-          <li>
-            <div class="list-icon">
-              <img src="assets/img/icons/store.png">
+          <li class='wow fadeIn' data-wow-delay='0.6s'>
+            <div class='list-icon'>
+              <img src='assets/img/icons/store.png'>
             </div>
-            <div class="list-text">Locales comerciales</div>
+            <div class='list-text'>Locales comerciales</div>
           </li>
-          <li>
-            <div class="list-icon">
-              <img src="assets/img/icons/gym.png">
+          <li class='wow fadeIn' data-wow-delay='0.7s'>
+            <div class='list-icon'>
+              <img src='assets/img/icons/gym.png'>
             </div>
-            <div class="list-text">Gimnasio</div>
+            <div class='list-text'>Gimnasio</div>
           </li>
         </ul>
       </div>
     </div>
   </section>
-  <section class="main-video" style="background-image: url(&#39;assets/img/section-03-bg.jpg&#39;);">
+
+  <section class='main-video' id='video' style='background-image: url(&#39;assets/img/section-03-bg.jpg&#39;);'>
     <h3>Video de toscana</h3>
-    <div class="main-video__trigger">
-      <img src="assets/img/icons/play.png">
+    <div class='main-video__trigger'>
+      <img class='wow zoomIn' src='assets/img/icons/play.png'>
     </div>
   </section>
-  <section class="main-properties">
-    <div class="main-properties__item">
-      <img alt="Prato" class="property-img w-100" src="assets/img/prato.jpg">
-      <div class="item-mask">
-        <img alt="Prato logo" class="property-logo" src="assets/img/logos/logo-prato.png">
-        <h4 class="strong">Prato</h4>
+
+  <section class='main-properties' id='proyectos'>
+    <div class='main-properties__item'>
+      <img alt='Prato' class='property-img w-100' src='assets/img/prato.jpg'>
+      <div class='item-mask wow fadeInUp'>
+        <img alt='Prato logo' class='property-logo' src='assets/img/logos/logo-prato.png'>
+        <h4 class='strong'>Prato</h4>
         <h4>Apartamentos</h4>
-        <div class="item-mask__area">
+        <div class='item-mask__area'>
           <span>Área</span>
           <br>
           70 m² hasta 87 m²
         </div>
-        <div class="item-mask__price">
+        <div class='item-mask__price'>
           <span>Desde</span>
           $323.601.608
           <br>
           <small>Valor impuestos incluido*</small>
         </div>
-        <div class="item-mask__button">
-          <a class="btn btn-custom white" href="#">Visitar Ahora</a>
+        <div class='item-mask__button'>
+          <a class='btn btn-custom white' href='http://67.205.183.131/Nivel/' target='blank'>Visitar Ahora</a>
         </div>
       </div>
     </div>
-    <div class="main-properties__item">
-      <img alt="livorno" class="property-img w-100" src="assets/img/livorno.jpg">
-      <div class="item-mask">
-        <img alt="livorno logo" class="property-logo" src="assets/img/logos/logo-livorno.png">
-        <h4 class="strong">Livorno</h4>
+    <div class='main-properties__item'>
+      <img alt='livorno' class='property-img w-100' src='assets/img/livorno.jpg'>
+      <div class='item-mask wow fadeInUp' data-wow-delay='0.5s'>
+        <img alt='livorno logo' class='property-logo' src='assets/img/logos/logo-livorno.png'>
+        <h4 class='strong'>Livorno</h4>
         <h4>Apartamentos</h4>
-        <div class="item-mask__area">
+        <div class='item-mask__area'>
           <span>Área</span>
           <br>
           55 m² hasta 62 m²
         </div>
-        <div class="item-mask__price">
+        <div class='item-mask__price'>
           <span>Desde</span>
           $251.913.401
           <br>
           <small>Valor impuestos incluido*</small>
         </div>
-        <div class="item-mask__button">
-          <a class="btn btn-custom white" href="#">Visitar Ahora</a>
+        <div class='item-mask__button'>
+          <a class='btn btn-custom white' href='http://67.205.183.131/Nivel/' target='blank'>Visitar Ahora</a>
         </div>
       </div>
     </div>
   </section>
-  <section class="main-location">
-    <div class="main-location__header">
+
+  <section class='main-location' id='ubicacion'>
+    <div class='main-location__header'>
       <h1>Ubicación</h1>
     </div>
-    <div class="main-location__map">
+    <div class='main-location__map'>
       <h1>
         AQUÍ NOS PUEDES
         <span>ENCONTRAR</span>
       </h1>
-      <iframe allowfullscreen="" aria-hidden="false" frameborder="0" height="420" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1983.4684949969858!2d-75.6204883907434!3d6.139167438547209!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e46831c07d4c241%3A0x8d9fb9a3701ea18a!2sPRATO%20DE%20LA%20TOSCANA%20APARTAMENTOS!5e0!3m2!1sen!2sve!4v1587606198754!5m2!1sen!2sve" style="border:0;" tabindex="0"></iframe>
+      <iframe allowfullscreen='' aria-hidden='false' frameborder='0' height='420' src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1983.4684949969858!2d-75.6204883907434!3d6.139167438547209!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e46831c07d4c241%3A0x8d9fb9a3701ea18a!2sPRATO%20DE%20LA%20TOSCANA%20APARTAMENTOS!5e0!3m2!1sen!2sve!4v1587606198754!5m2!1sen!2sve' style='border:0;' tabindex='0'></iframe>
     </div>
   </section>
-  <section class="main-form">
-    <div class="main-form__address">
-      <h1 class="title">
+
+  <section class='main-form' id='contacto'>
+    <div class='main-form__address'>
+      <h1 class='title'>
         Nuestra
         <span>Ciudadela</span>
       </h1>
@@ -316,109 +370,137 @@
         <dt>Dirección</dt>
         <dd>Calle 77 Sur Nro 34-35</dd>
         <dt>Teléfono</dt>
-        <dd>+ 57 520 27 14</dd>
+        <dd>
+          <a href='tel:575202714'>+ 57 520 27 14</a>
+        </dd>
         <dt>Celular</dt>
-        <dd>+ 57 314 877 57 01</dd>
+        <dd>
+          <a href='tel:573148775701'>+ 57 314 877 57 01</a>
+        </dd>
       </dl>
     </div>
-    <div class="main-form__form">
+    <div class='main-form__form'>
       <form>
         <h3>
           <span>contáctanos</span>
           ahora
         </h3>
-        <div class="row">
-          <div class="col-lg-6 col-md-6 col-xs-12">
-            <div class="form-group">
-              <input class="form-control" placeholder="Nombre">
+        <div class='row'>
+          <div class='col-lg-6 col-md-6 col-xs-12'>
+            <div class='form-group'>
+              <input class='form-control' placeholder='Nombre'>
             </div>
           </div>
-          <div class="col-lg-6 col-md-6 col-xs-12">
-            <div class="form-group">
-              <input class="form-control" placeholder="Apellidos">
+          <div class='col-lg-6 col-md-6 col-xs-12'>
+            <div class='form-group'>
+              <input class='form-control' placeholder='Apellidos'>
             </div>
           </div>
-          <div class="col-lg-6 col-md-6 col-xs-12">
-            <div class="form-group">
-              <input class="form-control" placeholder="Teléfono">
+          <div class='col-lg-6 col-md-6 col-xs-12'>
+            <div class='form-group'>
+              <input class='form-control' placeholder='Teléfono'>
             </div>
           </div>
-          <div class="col-lg-6 col-md-6 col-xs-12">
-            <div class="form-group">
-              <input class="form-control" placeholder="Ciudad">
+          <div class='col-lg-6 col-md-6 col-xs-12'>
+            <div class='form-group'>
+              <input class='form-control' placeholder='Ciudad'>
             </div>
           </div>
-          <div class="col-lg-12 col-md-12 col-xs-12">
-            <div class="form-group">
-              <input class="form-control" placeholder="Correo" type="email">
+          <div class='col-lg-12 col-md-12 col-xs-12'>
+            <div class='form-group'>
+              <input class='form-control' placeholder='Correo' type='email'>
             </div>
           </div>
-          <div class="col-lg-12 col-md-12 col-xs-12">
-            <div class="form-group mb-0">
-              <textarea class="form-control" placeholder="Mensaje"></textarea>
+          <div class='col-lg-12 col-md-12 col-xs-12'>
+            <div class='form-group mb-0'>
+              <textarea class='form-control' placeholder='Mensaje'></textarea>
             </div>
           </div>
-          <div class="col-lg-12 col-md-12 col-xs-12">
-            <div class="form-group form-check mb-1">
-              <input class="form-check-input" type="checkbox">
-              <label class="form-check-label">
+          <div class='col-lg-12 col-md-12 col-xs-12'>
+            <div class='form-group form-check mb-1'>
+              <input class='form-check-input' type='checkbox'>
+              <label class='form-check-label'>
                 Acepto
-                <a href="#">Politicas y Privacidad</a>
+                <a href='assets/pdf/MANUAL_DE_POLITICAS_PROMOTORA.pdf' target='blank'>Politicas y Privacidad</a>
               </label>
             </div>
           </div>
-          <div class="col-lg-12 col-md-12 col-xs-12">
-            <div class="form-group mt-3">
-              <input class="btn btn-submit btn-submit-white" type="submit">
+          <div class='col-lg-12 col-md-12 col-xs-12'>
+            <div class='form-group mt-3'>
+              <input class='btn btn-submit btn-submit-white' type='submit'>
             </div>
           </div>
         </div>
       </form>
     </div>
   </section>
-  <section class="main-footer">
-    <div class="main-footer__col">
-      <img alt="Toscana Ciudadela Logo" src="assets/img/logos/logo-toscana.png">
+
+  <section class='main-footer'>
+    <div class='main-footer__col'>
+      <img alt='Toscana Ciudadela Logo' src='assets/img/logos/logo-toscana.png'>
       <p>Ubicado en el municipio de Sabaneta, Antioquia, sector Loma de San José, zona de alta valorización en una reserva natural que te entregará toda la tranquilidad que necesitas.</p>
-      <ul class="rrss">
+      <ul class='rrss'>
         <li>
-          <i class="fa fa-facebook"></i>
+          <a href='https://www.facebook.com/nivelpropiedadraiz' target='blank'>
+            <i class='fa fa-facebook'></i>
+          </a>
         </li>
         <li>
-          <i class="fa fa-instagram"></i>
+          <a href='https://www.instagram.com/nivelpropiedadraiz/' target='blank'>
+            <i class='fa fa-instagram'></i>
+          </a>
         </li>
       </ul>
     </div>
-    <div class="main-footer__col">
-      <ul class="menu">
-        <li class="menu-title">MENÚ</li>
-        <li>Vive en Sabaneta</li>
-        <li>Estamos cerca de</li>
-        <li>Video</li>
-        <li>Proyectos</li>
-        <li>Ubicación</li>
-        <li>Contacto</li>
+    <div class='main-footer__col'>
+      <ul class='menu'>
+        <li class='menu-title'>MENÚ</li>
+        <li>
+          <a class='scroll-link' href='#sabaneta'>Vive en Sabaneta</a>
+        </li>
+        <li>
+          <a class='scroll-link' href='#ciudadela'>Estamos cerca de</a>
+        </li>
+        <li>
+          <a class='scroll-link' href='#video'>Video</a>
+        </li>
+        <li>
+          <a class='scroll-link' href='#proyectos'>Proyectos</a>
+        </li>
+        <li>
+          <a class='scroll-link' href='#ubicacion'>Ubicación</a>
+        </li>
+        <li>
+          <a class='scroll-link' href='#contacto'>Contacto</a>
+        </li>
       </ul>
     </div>
-    <div class="main-footer__col">
-      <ul class="menu">
-        <li class="menu-title">Contáctanos</li>
+    <div class='main-footer__col'>
+      <ul class='menu'>
+        <li class='menu-title'>Contáctanos</li>
       </ul>
       <dl>
         <dt>Dirección</dt>
         <dd>Calle 77 Sur Nro 34-35</dd>
         <dt>Teléfono</dt>
-        <dd>+ 57 520 27 14</dd>
+        <dd>
+          <a href='tel:575202714'>+ 57 520 27 14</a>
+        </dd>
         <dt>Celular</dt>
-        <dd>+ 57 314 877 57 01</dd>
+        <dd>
+          <a href='tel:573148775701'>+ 57 314 877 57 01</a>
+        </dd>
       </dl>
-      <a class="btn btn-custom transparent" href="">Descargar Brochure</a>
+      <a class='btn btn-custom transparent' href=''>Descargar Brochure</a>
     </div>
   </section>
+
   <script src='https://use.fontawesome.com/70a3cb5d53.js'></script>
   <script src='https://code.jquery.com/jquery-3.3.1.min.js'></script>
   <script src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js'></script>
   <script src='https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js'></script>
+  <script src='https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js'></script>
+  <script src='assets/js/wow.min.js'></script>
   <script src='assets/js/slick.min.js'></script>
   <script src='assets/js/main.js'></script>
 

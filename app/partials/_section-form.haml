@@ -1,0 +1,47 @@
+%section.main-form#contacto
+  .main-form__address
+    %h1.title
+      Nuestra
+      %span Ciudadela
+    %dl
+      %dt Dirección
+      %dd Calle 77 Sur Nro 34-35
+      %dt Teléfono
+      %dd
+        %a{ href: "tel:575202714" } + 57 520 27 14
+      %dt Celular
+      %dd
+        %a{ href: "tel:573148775701" } + 57 314 877 57 01
+  .main-form__form
+    %form
+      %h3
+        %span contáctanos
+        ahora
+      .row
+        .col-lg-6.col-md-6.col-xs-12
+          .form-group
+            %input.form-control{placeholder: "Nombre"}
+        .col-lg-6.col-md-6.col-xs-12
+          .form-group
+            %input.form-control{placeholder: "Apellidos"}
+        .col-lg-6.col-md-6.col-xs-12
+          .form-group
+            %input.form-control{placeholder: "Teléfono"}
+        .col-lg-6.col-md-6.col-xs-12
+          .form-group
+            %input.form-control{placeholder: "Ciudad"}
+        .col-lg-12.col-md-12.col-xs-12
+          .form-group
+            %input.form-control{placeholder: "Correo", type: "email"}
+        .col-lg-12.col-md-12.col-xs-12
+          .form-group.mb-0
+            %textarea.form-control{placeholder: "Mensaje"}
+        .col-lg-12.col-md-12.col-xs-12
+          .form-group.form-check.mb-1
+            %input.form-check-input{type: "checkbox"}/
+            %label.form-check-label
+              Acepto
+              %a{ href: "assets/pdf/MANUAL_DE_POLITICAS_PROMOTORA.pdf", target: "blank" } Politicas y Privacidad
+        .col-lg-12.col-md-12.col-xs-12
+          .form-group.mt-3
+            %input.btn.btn-submit.btn-submit-white{ type: "submit" }

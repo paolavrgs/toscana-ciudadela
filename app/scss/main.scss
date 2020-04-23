@@ -7,11 +7,41 @@ body {
 }
 
 .navbar {
+  background-color: $primary;
   background-image: url('../img/navbar-bg.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   padding: 8px 5vw 8px 8vw;
+
+  @include respond-to(xs) {
+    background-image: unset;
+    padding: 8px 16px;
+  }
+
+  @include respond-to(sm) {
+    background-image: unset;
+    padding: 8px 16px;
+  }
+
+  @include respond-to(md) {
+    background-image: unset;
+    padding: 8px 16px;
+  }
+
+  @include respond-to(lg) {
+    padding: 8px 20px;
+  }
+}
+
+.navbar-toggler {
+  span {
+    color: $white;
+  }
+
+  &:focus {
+    outline: none;
+  }
 }
 
 .nav-item {
@@ -24,6 +54,10 @@ body {
 
 .navbar-brand img {
   width: 135px;
+
+  @include respond-to(xs) {
+    width: 125px;
+  }
 }
 
 .nav-link {
@@ -51,19 +85,30 @@ body {
     display: flex;
     align-items: center;
     padding-left: 8vw;
+
+    @include respond-to(xs) {
+      padding-left: 15px;
+      padding-right: 15px;
+    }
   }
 
-  .main-slider__info {
+  .main-slider__box {
     background-color: rgba($primary, 0.66);
     color: $white;
     padding: 30px;
     width: 400px;
-    height: 85%;
+    min-height: 500px;
     text-align: center;
     display: flex;
     justify-content: center;
     flex-direction: column;
 
+    @include respond-to(xs) {
+      @include size(100%, auto);
+    }
+  }
+
+  .main-slider__info {
     ul {
       padding-left: 0;
     }
@@ -78,6 +123,9 @@ body {
       font-size: 17px;
       letter-spacing: 4px;
       font-weight: $medium;
+      @include respond-to(xs) {
+        font-size: 15px;
+      }
     }
 
     h2 {
@@ -85,9 +133,17 @@ body {
       line-height: 30px;
       font-size: 40px;
 
+      @include respond-to(xs) {
+        font-size: 30px;
+      }
+
       span {
         font-weight: $medium;
         font-size: 17px;
+
+        @include respond-to(xs) {
+          font-size: 15px;
+        }
       }
 
       i {
@@ -100,8 +156,98 @@ body {
       font-weight: $extrabold;
       font-size: 35px;
       margin-bottom: 0;
+
+      @include respond-to(xs) {
+        font-size: 30px;
+      }
+    }
+  }
+
+  .main-slider__infoproject {
+    text-align: left;
+
+    img {
+      width: 140px;
+      margin-bottom: 15px;
     }
 
+    h4 {
+      font-weight: $regular;
+      font-size: 38px;
+      text-transform: uppercase;
+      position: relative;
+      margin-bottom: 15px;
+      padding-bottom: 15px;
+
+      @include respond-to(xs) {
+        font-size: 25px;
+      }
+
+      &::before {
+        @include pseudo();
+        @include size(15%, 1px);
+        background-color: $white;
+        bottom: 0;
+        left: 0;
+      }
+    }
+
+    .infoproject__address {
+      text-transform: uppercase;
+    }
+
+    .infoproject__address p, .infoproject__area p {
+      font-size: 23px;
+      font-weight: $medium;
+      margin-bottom: 15px;
+      line-height: 25px;
+
+      @include respond-to(xs) {
+        font-size: 19px;
+      }
+    }
+
+    .infoproject__address span, .infoproject__area span, .infoproject__price span {
+      font-weight: $light;
+      font-size: 23px;
+      text-transform: none;
+
+      @include respond-to(xs) {
+        font-size: 19px;
+      }
+    }
+
+    .infoproject__price {
+      line-height: 30px;
+
+      p {
+        font-weight: $medium;
+        font-size: 32px;
+        margin-bottom: 2px;
+
+        @include respond-to(xs) {
+          font-size: 28px;
+        }
+      }
+
+      span {
+        font-size: 26px;
+
+        @include respond-to(xs) {
+          font-size: 22px;
+        }
+      }
+
+      small {
+        font-size: 18px;
+        font-style: italic;
+        font-weight: $regular;
+
+        @include respond-to(xs) {
+          font-size: 15px;
+        }
+      }
+    }
   }
 }
 
@@ -266,7 +412,7 @@ textarea {
 .main-about {
   display: grid;
   grid-template-columns: 2fr 1fr;
-  padding: 30px;
+  padding: 30px 30px 60px 30px;
 
   @include respond-to(sm) {
     grid-template-columns: 100%;
@@ -607,6 +753,10 @@ textarea {
   align-items: center;
   padding: 40px 30px;
 
+  @include respond-to(xs) {
+    justify-content: center;
+  }
+
   h1 {
     color: $white;
     font-weight: $medium;
@@ -614,6 +764,10 @@ textarea {
     letter-spacing: 1.41px;
     text-transform: uppercase;
     margin-bottom: 0;
+
+    @include respond-to(xs) {
+      font-size: 30px;
+    }
   }
 }
 
@@ -636,6 +790,10 @@ textarea {
     letter-spacing: 1.41px;
     text-transform: uppercase;
     margin-bottom: 30px;
+
+    @include respond-to(xs) {
+      font-size: 30px;
+    }
 
     span {
       font-weight: $medium;
@@ -686,6 +844,15 @@ textarea {
 
       dd {
         font-weight: $light;
+
+        a {
+          color: $white;
+      
+          &:hover {
+            text-decoration: none;
+            color: rgba($white, .66);
+          }
+        }
       }
     }
   }
@@ -785,6 +952,15 @@ textarea {
   ul {
     padding-left: 0;
     list-style: none;
+  }
+
+  a {
+    color: $white;
+
+    &:hover {
+      text-decoration: none;
+      color: rgba($white, .66);
+    }
   }
 
   .rrss {
