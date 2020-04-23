@@ -2,6 +2,16 @@ body {
   font-family: "Montserrat", sans-serif;
 }
 
+body::-webkit-scrollbar {
+  width: 6px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #205250;
+  outline: 1px solid #585e59;
+  border-radius: 5px;
+}
+
 .navbar {
   background-color: #205250;
   background-image: url("../img/navbar-bg.jpg");
