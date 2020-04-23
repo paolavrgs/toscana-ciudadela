@@ -105,6 +105,10 @@ body {
   }
 }
 
+textarea {
+  resize: none;
+}
+
 .main-quick-form {
   background-color: $primary;
   display: grid;
@@ -157,26 +161,24 @@ body {
       grid-template-columns: 50% 50%;
     }
 
-    .form-check-label {
-      font-size: 11px;
-      color: $white;
-
-      a {
-        color: $white;
-        text-decoration: underline;
-      }
-    }
-
     textarea {
       height: 80px;
-      resize: none;
     }
+  }
+}
+
+.form-check-label {
+  font-size: 11px;
+  color: $white;
+
+  a {
+    color: $white;
+    text-decoration: underline;
   }
 }
 
 .btn-submit {
   border: 1px solid $white;
-  width: 100%;
   border-radius: 0;
   color: $white;
   background-color: transparent;
@@ -193,6 +195,10 @@ body {
   &.btn-submit-white {
     background-color: $white;
     color: $primary;
+    font-weight: $medium;
+    font-size: 10px;
+    letter-spacing: 1.33px;
+    padding: 6px 20px;
 
     &:hover {
       background-color: transparent;
@@ -223,6 +229,19 @@ body {
   &.white {
     color: $white;
     border: 1px solid $white;
+
+    &:hover {
+      background-color: $white;
+      color: $primary;
+      transition: all ease-in-out .3s;
+    }
+  }
+
+  &.transparent {
+    color: $white;
+    border: 1px solid $white;
+    background-color: transparent;
+    font-weight: $regular;  
 
     &:hover {
       background-color: $white;
@@ -480,6 +499,7 @@ body {
     font-weight: $light;
     text-transform: uppercase;
     margin-bottom: 20px;
+    text-align: center;
   }
 }
 
@@ -487,6 +507,11 @@ body {
   display: grid;
   grid-template-columns: 50% 50%;
   height: 100vh;
+
+  @include respond-to(xs) {
+    height: auto;
+    grid-template-columns: 100%;
+  }
 
   .main-properties__item {
     position: relative;
@@ -504,6 +529,14 @@ body {
       width: 100%;
       height: 260px;
       padding: 20px 40px;
+
+      @include respond-to(xs) {
+        height: 100%;
+      }
+
+      @include respond-to(sm) {
+        height: auto;
+      }
       
       .property-logo {
         margin-bottom: 10px;
@@ -544,6 +577,243 @@ body {
       position: absolute;
       right: 40px;
       bottom: 20px;
+
+      @include respond-to(xs) {
+        position: relative;
+        right: unset;
+        bottom: unset;
+      }
+
+      @include respond-to(sm) {
+        position: relative;
+        right: unset;
+        bottom: unset;
+      }
+
+      @include respond-to(md) {
+        right: 20px;
+        bottom: unset;
+        top: 20px;
+      }
     }
+  }
+}
+
+.main-location__header {
+  background-image: url('../img/location-header.png');
+  background-position: center;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 40px 30px;
+
+  h1 {
+    color: $white;
+    font-weight: $medium;
+    font-size: 40px;
+    letter-spacing: 1.41px;
+    text-transform: uppercase;
+    margin-bottom: 0;
+  }
+}
+
+.main-location__map {
+  padding: 40px 60px;
+  text-align: center;
+
+  @include respond-to(xs) {
+    padding: 40px 20px;
+  }
+
+  iframe {
+    width: 100%;
+  }
+
+  h1 {
+    color: $text;
+    font-weight: $light;
+    font-size: 40px;
+    letter-spacing: 1.41px;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+
+    span {
+      font-weight: $medium;
+    }
+  }
+}
+
+.main-form {
+  background-image: url('../img/section-02-06-bg.jpg');
+  @include bg(cover, no-repeat, center);
+  display: grid;
+  grid-template-columns: 50% 50%;
+  padding: 0 100px 85px 100px;
+
+  @include respond-to(xs) {
+    grid-template-columns: 100%;
+    padding: 0 20px 50px 20px;
+  }
+
+  @include respond-to(sm) {
+    grid-template-columns: 100%;
+  }
+
+  @include respond-to(md) {
+    grid-template-columns: 40% 60%;
+    padding: 0 50px 85px 50px;
+  }
+
+  @include respond-to(lg) {
+    padding: 0 15px 70px 15px;
+  }
+  
+  .main-form__address {
+    z-index: 1;
+
+    dl {
+      margin-left: 45px;
+      color: $white;
+      font-size: 18px;
+
+      @include respond-to(xs) {
+        margin-left: 0;
+      }
+
+      dt {
+        font-weight: $semibold;
+      }
+
+      dd {
+        font-weight: $light;
+      }
+    }
+  }
+
+  .title {
+    background: linear-gradient(90deg, rgba(32,82,80,1) 0%, rgba(35,97,94,0.86) 45%, rgba(32,82,80,0.10) 100%);;
+    color: $white;
+    display: inline-block;
+    margin: 110px 0 90px 45px;
+    
+    &::before {
+      content: "06";
+      color: rgba($white, .16);
+      z-index: -1;
+    }
+  }
+}
+
+.main-form__form {
+  display: flex;
+  align-items: center;
+  margin-top: 100px;
+  
+  @include respond-to(xs) {
+    margin-top: 30px;
+  }
+
+  form {
+    border: 1px solid $white;
+    padding: 15px 30px 30px 30px;
+
+    h3 {
+      color: $white;
+      text-transform: uppercase;
+      font-weight: $light;
+      letter-spacing: 2.67px;
+      font-size: 20px;
+      margin-bottom: 20px;
+
+      span {
+        font-weight: $bold;
+      }
+    }
+  }
+
+  .form-control {
+    background-color: rgba(255, 255, 255, 0.04);
+    color: $white;
+    font-size: 14px;
+    
+    &:focus {
+      border: 1px solid rgba($white, .5);
+    }
+
+    &::placeholder {
+      color: $white;
+    }
+  }
+}
+
+.main-footer {
+  background-image: url('../img/footer-bg.jpg');
+  display: grid;
+  grid-template-columns: 40% 30% 30%;
+  @include bg(cover, no-repeat, center);
+  padding: 50px 100px;
+
+  @include respond-to(xs) {
+    grid-template-columns: 100%;
+    padding: 20px;
+    text-align: center;
+  }
+
+  @include respond-to(sm) {
+    grid-template-columns: 50% 50%;
+  }
+}
+
+.main-footer__col {
+  color: $white;
+
+  p {
+    font-size: 18px;
+    font-weight: $light;
+    width: 75%;
+
+    @include respond-to(xs) {
+      width: 100%;
+    }
+  }
+
+  img {
+    width: 140px;
+    margin-bottom: 20px;
+  }
+
+  ul {
+    padding-left: 0;
+    list-style: none;
+  }
+
+  .rrss {
+    display: inline-flex;
+
+    li {
+      border: 1px solid $white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      @include size(36px);
+      border-radius: 50%;
+      margin-right: 10px;
+    }
+  }
+
+  .menu {
+    li {
+      font-weight: $light;
+      font-size: 16px;
+      letter-spacing: 0.05px;
+      margin-bottom: 5px;
+
+      &.menu-title {
+        font-weight: $semibold;
+        text-transform: uppercase;
+        letter-spacing: 0.45px;
+      }
+    }
+
   }
 }

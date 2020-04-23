@@ -78,6 +78,85 @@
           .item-mask__button
             %a.btn.btn-custom.white{ href: "#" } Visitar Ahora
     %section.main-location
+      .main-location__header
+        %h1 Ubicación
+      .main-location__map
+        %h1
+          AQUÍ NOS PUEDES
+          %span ENCONTRAR
+        %iframe{allowfullscreen: "", "aria-hidden" => "false", frameborder: "0", height: "420", src: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1983.4684949969858!2d-75.6204883907434!3d6.139167438547209!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e46831c07d4c241%3A0x8d9fb9a3701ea18a!2sPRATO%20DE%20LA%20TOSCANA%20APARTAMENTOS!5e0!3m2!1sen!2sve!4v1587606198754!5m2!1sen!2sve", style: "border:0;", tabindex: "0"}
     %section.main-form
+      .main-form__address
+        %h1.title
+          Nuestra
+          %span Ciudadela
+        %dl
+          %dt Dirección
+          %dd Calle 77 Sur Nro 34-35
+          %dt Teléfono
+          %dd + 57 520 27 14
+          %dt Celular
+          %dd + 57 314 877 57 01
+      .main-form__form
+        %form
+          %h3
+            %span contáctanos
+            ahora
+          .row
+            .col-lg-6.col-md-6.col-xs-12
+              .form-group
+                %input.form-control{placeholder: "Nombre"}
+            .col-lg-6.col-md-6.col-xs-12
+              .form-group
+                %input.form-control{placeholder: "Apellidos"}
+            .col-lg-6.col-md-6.col-xs-12
+              .form-group
+                %input.form-control{placeholder: "Teléfono"}
+            .col-lg-6.col-md-6.col-xs-12
+              .form-group
+                %input.form-control{placeholder: "Ciudad"}
+            .col-lg-12.col-md-12.col-xs-12
+              .form-group
+                %input.form-control{placeholder: "Correo", type: "email"}
+            .col-lg-12.col-md-12.col-xs-12
+              .form-group.mb-0
+                %textarea.form-control{placeholder: "Mensaje"}
+            .col-lg-12.col-md-12.col-xs-12
+              .form-group.form-check.mb-1
+                %input.form-check-input{type: "checkbox"}/
+                %label.form-check-label
+                  Acepto
+                  %a{ href: "#" } Politicas y Privacidad
+            .col-lg-12.col-md-12.col-xs-12
+              .form-group.mt-3
+                %input.btn.btn-submit.btn-submit-white{ type: "submit" }
     %section.main-footer
+      .main-footer__col
+        %img{ src: "assets/img/logos/logo-toscana.png", alt: "Toscana Ciudadela Logo" }
+        %p Ubicado en el municipio de Sabaneta, Antioquia, sector Loma de San José, zona de alta valorización en una reserva natural que te entregará toda la tranquilidad que necesitas.
+        %ul.rrss
+          %li
+            %i.fa.fa-facebook
+          %li
+            %i.fa.fa-instagram
+      .main-footer__col
+        %ul.menu
+          %li.menu-title MENÚ
+          %li Vive en Sabaneta
+          %li Estamos cerca de 
+          %li Video 
+          %li Proyectos
+          %li Ubicación
+          %li Contacto
+      .main-footer__col
+        %ul.menu
+          %li.menu-title Contáctanos
+        %dl
+          %dt Dirección
+          %dd Calle 77 Sur Nro 34-35
+          %dt Teléfono
+          %dd + 57 520 27 14
+          %dt Celular
+          %dd + 57 314 877 57 01
+        %a.btn.btn-custom.transparent{ href: "" } Descargar Brochure
     = Haml::Engine.new(File.read('app/partials/_scripts.haml')).render
