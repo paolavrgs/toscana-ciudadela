@@ -1113,7 +1113,7 @@ textarea {
   position: fixed;
   bottom: 10px;
   right: 10px;
-  z-index: 1;
+  z-index: 5;
   display: flex;
 }
 
@@ -1140,6 +1140,12 @@ textarea {
   max-width: 70vw;
 }
 
+@media (min-width: 0px) and (max-width: 575px) {
+  .modal-video .modal-dialog {
+    max-width: 90vw;
+  }
+}
+
 .modal-video .modal-content {
   background-color: transparent;
   border: 0;
@@ -1150,7 +1156,6 @@ textarea {
 }
 
 .modal-video video {
-  height: 70vh;
   width: 100%;
 }
 
