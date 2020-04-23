@@ -720,6 +720,10 @@ textarea {
   text-align: center;
 }
 
+.main-video .main-video__trigger {
+  cursor: pointer;
+}
+
 .main-properties {
   display: grid;
   grid-template-columns: 50% 50%;
@@ -1103,4 +1107,62 @@ textarea {
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.45px;
+}
+
+.fixed-buttons {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  z-index: 1;
+  display: flex;
+}
+
+.fixed-buttons .whatsapp, .fixed-buttons .js-gotop {
+  height: 70px;
+  width: 50px;
+  cursor: pointer;
+  margin: 0 8px;
+}
+
+.fixed-buttons .whatsapp img, .fixed-buttons .js-gotop img {
+  width: 100%;
+}
+
+.fixed-buttons .js-gotop {
+  display: none;
+}
+
+.icon-map {
+  position: absolute;
+}
+
+.modal-video .modal-dialog {
+  max-width: 70vw;
+}
+
+.modal-video .modal-content {
+  background-color: transparent;
+  border: 0;
+}
+
+.modal-video iframe {
+  height: 70vh;
+}
+
+.modal-video video {
+  height: 70vh;
+  width: 100%;
+}
+
+.modal-video video:focus {
+  outline: none;
+}
+
+.modal-video .close {
+  color: #fff;
+}
+
+.modal-video .close:not(:disabled):not(.disabled):focus, .modal-video .close:not(:disabled):not(.disabled):hover {
+  color: #fff;
+  opacity: 1;
 }

@@ -3,6 +3,11 @@
   %head
     = Haml::Engine.new(File.read('app/partials/_head.haml')).render
   %body
+    .fixed-buttons
+      %a.whatsapp{ href: "http://api.whatsapp.com/send?phone=", target: "blank" }
+        %img{ src: "assets/img/icons/whatsapp.png" }
+      .js-gotop
+        %img{ src: "assets/img/icons/top.png" }
     = Haml::Engine.new(File.read('app/partials/_navbar.haml')).render
     = Haml::Engine.new(File.read('app/partials/_slider.haml')).render
     = Haml::Engine.new(File.read('app/partials/_quick-form.haml')).render

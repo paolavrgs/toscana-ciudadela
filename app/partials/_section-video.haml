@@ -1,4 +1,14 @@
 %section.main-video#video{ style: "background-image: url('assets/img/section-03-bg.jpg');" }
   %h3 Video de toscana
-  .main-video__trigger
+  .main-video__trigger{ "data-toggle" => "modal", "data-target" => "#videoModal" }
     %img.wow.zoomIn{ src: "assets/img/icons/play.png" }
+/ Modal
+#videoModal.modal.fade.modal-video{"aria-hidden" => "true", role: "dialog", tabindex: "-1"}
+  .modal-dialog{role: "document"}
+    .modal-content
+      .modal-body
+        %button.close{"aria-label" => "Close", "data-dismiss" => "modal", type: "button"}
+          %span.fa.fa-close{"aria-hidden" => "true"}
+        -# %iframe{allow: "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture", allowfullscreen: "", frameborder: "0", src: "https://www.youtube.com/embed/L7OLY4HCctQ", width: "100%"}
+        %video{controls: ""}
+          %source{src: "https://res.cloudinary.com/demo/video/upload/forest_bike.webm", type: "video/webm"}
